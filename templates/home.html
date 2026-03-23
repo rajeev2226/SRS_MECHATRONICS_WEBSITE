@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRS MECHATRONICS INSTRUMENTATIONS | Testing Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for smooth scrolling and animations */
+        html { scroll-behavior: smooth; }
+        .hero-pattern {
+            background-color: #080E4B;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .fade-in { animation: fadeIn 1.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                        <img src="/static/srs_logo-removebg-preview.png" alt="SRS Logo" class="h-24 w-40" onerror="console.log('Image failed to load'); this.style.display='none';" onload="console.log('Image loaded successfully')">
+
+                        <!-- <i data-lucide="cpu" class="h-8 w-8 text-blue-700"></i> -->
+                        <span class="font-bold text-xl tracking-tight text-blue-900 leading-tight">
+                            SRS MECHATRONICS<br><span class="text-sm font-medium text-gray-500">INSTRUMENTATIONS</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-blue-700 font-medium transition-colors">Home</a>
+                    <a href="/about" class="text-gray-700 hover:text-blue-700 font-medium transition-colors">About Us</a>
+                    <div class="relative">
+                        <button class="text-gray-700 hover:text-blue-700 font-medium transition-colors flex items-center gap-1" onclick="toggleDropdown()">
+                            Products <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                        </button>
+                        <div id="products-dropdown" class="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible transform translate-y-2 transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="/products/chemical" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
+                                    <i data-lucide="flask-conical" class="h-4 w-4 inline mr-2"></i>Chemical Tests
+                                </a>
+                                <a href="/products/electrical" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
+                                    <i data-lucide="zap" class="h-4 w-4 inline mr-2"></i>Electrical Tests
+                                </a>
+                                <a href="/products/environmental" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
+                                    <i data-lucide="thermometer" class="h-4 w-4 inline mr-2"></i>Environmental Tests
+                                </a>
+                                <a href="/products/fire-smoke" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
+                                    <i data-lucide="flame" class="h-4 w-4 inline mr-2"></i>Fire and Smoke Tests
+                                </a>
+                                <a href="/products/optical" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
+                                    <i data-lucide="eye" class="h-4 w-4 inline mr-2"></i>Optical Tests
+                                </a>
+                                <a href="/products/sample-prep" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
+                                    <i data-lucide="test-tube" class="h-4 w-4 inline mr-2"></i>Sample Preparation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/services" class="text-gray-700 hover:text-blue-700 font-medium transition-colors">Services</a>
+                    <a href="/contact" class="bg-blue-700 text-white px-5 py-2 rounded-md hover:bg-blue-800 transition-colors font-medium">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern pt-32 pb-20 md:pt-40 md:pb-28 text-white min-h-[80vh] flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+            <div class="max-w-3xl">
+                <div class="inline-block bg-blue-600/20 text-blue-300 font-semibold px-4 py-1 rounded-full mb-6 border border-blue-500/30">
+                    The New Benchmark in Testing
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Engineering Expertise.<br>
+                    <span class="text-blue-500">Global Reliability.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+                    Trusted experts in manufacturing standard compliant test instruments. We innovate, design, and develop precision equipment for analytical and industrial applications worldwide.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#products" class="bg-blue-600 text-white text-center px-8 py-4 rounded-md font-bold hover:bg-blue-700 transition-colors">
+                        Explore Our Products
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-white text-white text-center px-8 py-4 rounded-md font-bold hover:bg-white hover:text-slate-900 transition-colors">
+                        Get a Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-blue-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <i data-lucide="award" class="h-10 w-10 mx-auto mb-4 text-blue-300"></i>
+                    <h3 class="text-3xl font-bold mb-2">40+</h3>
+                    <p class="text-blue-200">Years Engineering Expertise</p>
+                </div>
+                <div>
+                    <i data-lucide="globe-2" class="h-10 w-10 mx-auto mb-4 text-blue-300"></i>
+                    <h3 class="text-3xl font-bold mb-2">60+</h3>
+                    <p class="text-blue-200">Countries Exporting</p>
+                </div>
+                <div>
+                    <i data-lucide="users" class="h-10 w-10 mx-auto mb-4 text-blue-300"></i>
+                    <h3 class="text-3xl font-bold mb-2">1000+</h3>
+                    <p class="text-blue-200">Satisfied Customers</p>
+                </div>
+                <div>
+                    <i data-lucide="check-circle-2" class="h-10 w-10 mx-auto mb-4 text-blue-300"></i>
+                    <h3 class="text-3xl font-bold mb-2">100%</h3>
+                    <p class="text-blue-200">Test Standard Compliance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Core Products & Categories</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Reliable, robust, and easy-to-use test instrumentation designed specifically for the cable, textile, plastics, and mechatronics industries.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden flex items-center justify-center">
+                        <i data-lucide="flame" class="h-16 w-16 text-gray-400 group-hover:text-blue-500 transition-colors"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Fire & Smoke Tests</h3>
+                        <p class="text-gray-600 mb-4">Evaluate fire behavior with Heat Release Rates, Oxygen Index, and Total Smoke Production measuring units.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 inline-flex items-center">
+                            Know More <i data-lucide="arrow-right" class="h-4 w-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden flex items-center justify-center">
+                        <i data-lucide="activity" class="h-16 w-16 text-gray-400 group-hover:text-blue-500 transition-colors"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Physical & Mechanical Tests</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive solutions for testing tensile strength, abrasion resistance, and mechanical endurance.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 inline-flex items-center">
+                            Know More <i data-lucide="arrow-right" class="h-4 w-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden flex items-center justify-center">
+                        <i data-lucide="thermometer-snowflake" class="h-16 w-16 text-gray-400 group-hover:text-blue-500 transition-colors"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Climatic & Low Temp Chambers</h3>
+                        <p class="text-gray-600 mb-4">Provide extra reliability during stability testing and simulate extreme environmental conditions flawlessly.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 inline-flex items-center">
+                            Know More <i data-lucide="arrow-right" class="h-4 w-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Quality Assurance -->
+    <section id="quality" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose SRS Mechatronics?</h2>
+                    <div class="h-1 w-20 bg-blue-600 mb-8"></div>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Originally established with an outlook to manufacture instruments for analytical and industrial applications, we have expanded our manufacturing processes to innovate, design and develop instruments specific to complex engineering demands.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="h-6 w-6 text-blue-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Engineering Expertise</h4>
+                                <p class="text-gray-600 text-sm">Trusted brand in manufacturing standard-compliant test instruments.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="shield-check" class="h-6 w-6 text-blue-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Trust and Confidentiality</h4>
+                                <p class="text-gray-600 text-sm">We understand the importance of trust and intellectual property in modern industry.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="microscope" class="h-6 w-6 text-blue-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Quality Assurance</h4>
+                                <p class="text-gray-600 text-sm">Delivering test instruments with the latest technology and relentless innovation.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <div class="bg-gray-100 rounded-2xl p-8 border border-gray-200">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-xl shadow-sm text-center border-t-4 border-blue-600">
+                                <i data-lucide="zap" class="h-8 w-8 text-blue-600 mx-auto mb-2"></i>
+                                <h5 class="font-bold text-gray-800">Electrical Tests</h5>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm text-center border-t-4 border-blue-600">
+                                <i data-lucide="beaker" class="h-8 w-8 text-blue-600 mx-auto mb-2"></i>
+                                <h5 class="font-bold text-gray-800">Chemical Tests</h5>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm text-center border-t-4 border-blue-600">
+                                <i data-lucide="eye" class="h-8 w-8 text-blue-600 mx-auto mb-2"></i>
+                                <h5 class="font-bold text-gray-800">Optical Tests</h5>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm text-center border-t-4 border-blue-600">
+                                <i data-lucide="layers" class="h-8 w-8 text-blue-600 mx-auto mb-2"></i>
+                                <h5 class="font-bold text-gray-800">Sample Prep</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Let's Build the Future Together</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600">Reach out to our engineering experts for inquiries, quotes, or support.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md p-8">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                            <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Message *</label>
+                        <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required></textarea>
+                    </div>
+                    <button type="button" onclick="alert('Message Sent Successfully! (Demo Only)')" class="w-full bg-blue-700 text-white font-bold py-3 px-4 rounded-md hover:bg-blue-800 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="/static/srs_logo-removebg-preview.png" alt="SRS Logo" class="h-24 w-40" onerror="console.log('Image failed to load'); this.style.display='none';" onload="console.log('Image loaded successfully')">
+                        <span class="font-bold text-xl tracking-tight text-blue-900 leading-tight">
+                        <span class="font-bold text-lg text-white">SRS MECHATRONICS</span>
+                    </div>
+                    <p class="text-sm text-gray-400 max-w-sm mb-4">
+                        Trusted name in quality test instruments. We manufacture standard-compliant test equipment with excellent reliability and performance globally.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="twitter" class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="mail" class="h-5 w-5"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Our Products</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Fire & Smoke Tests</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Physical & Mechanical Tests</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Environmental Chambers</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Optical & Chemical Tests</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="h-4 w-4 mr-2 mt-0.5 text-blue-500 flex-shrink-0"></i>
+                            <span>Delhi, India</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="phone" class="h-4 w-4 mr-2 text-blue-500"></i>
+                            <span>+91 8285796991</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="mail" class="h-4 w-4 mr-2 text-blue-500"></i>
+                            <span>info@srsmechatronics.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2026 SRS Mechatronics Instrumentations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons -->
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('products-dropdown');
+            const isVisible = dropdown.classList.contains('opacity-100');
+
+            if (isVisible) {
+                dropdown.classList.remove('opacity-100', 'visible');
+                dropdown.classList.add('opacity-0', 'invisible');
+            } else {
+                dropdown.classList.remove('opacity-0', 'invisible');
+                dropdown.classList.add('opacity-100', 'visible');
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('products-dropdown');
+            const button = event.target.closest('button');
+
+            if (!button || !button.onclick || button.onclick.toString().indexOf('toggleDropdown') === -1) {
+                dropdown.classList.remove('opacity-100', 'visible');
+                dropdown.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        lucide.createIcons();
+    </script>
+</body>
+</html>
